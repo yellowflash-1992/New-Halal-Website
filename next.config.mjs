@@ -6,8 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  basePath: "/YOUR-REPOSITORY-NAME",
-  assetPrefix: "/YOUR-REPOSITORY-NAME/",
+  basePath: "/halal-fit-sis",
+  assetPrefix: "/halal-fit-sis",
   // This safely skips headers during the static build phase
   ...(process.env.NODE_ENV !== "production" && {
     async headers() {
