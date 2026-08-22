@@ -1,0 +1,52 @@
+name: continue-config
+version: "1"
+schema: v1
+
+models:
+  - name: Llama 3.1 8B
+    provider: ollama
+    model: llama3.1:8b
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Qwen Coder 1.5B
+    provider: ollama
+    model: qwen2.5-coder:1.5b-base
+    apiBase: http://localhost:11434
+    roles:
+      - autocomplete
+
+  - name: Nomic Embed
+    provider: ollama
+    model: nomic-embed-text:latest
+    apiBase: http://localhost:11434
+    roles:
+      - embed
+
+# name: Local Ollama Config
+# version: 1.0.0
+# schema: v1
+
+# models:
+#   - name: Llama 3.1 (8B)
+#     provider: ollama
+#     model: llama3.1:8b
+#     roles:
+#       - chat
+#       - edit
+#       - apply
+
+#   - name: Qwen 2.5 Coder (1.5B)
+#     provider: ollama
+#     model: qwen2.5-coder:1.5b-base
+#     roles:
+#       - autocomplete
+
+# # This sets up your local context indexing
+# embedOptions:
+#   provider: ollama
+#   model: nomic-embed-text:latest
+

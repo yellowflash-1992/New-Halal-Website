@@ -1,0 +1,192 @@
+@import "./dashboard.css";
+@import "./programs.css";
+@import "./blog.css";
+
+:root {
+  --page: #f6ecec;
+  --rose: #c97e8e; /* primary buttons / accents */
+  --rose-deep: #b06576;
+  --plum: #7a4a56; /* headings / script logo */
+  --plum-soft: #8f6470;
+  --ink: #6b5560; /* body text */
+  --ink-soft: #9a8891;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-solid: #fbf6f5;
+  --radius: 18px;
+  --shadow: 0 18px 40px -22px rgba(122, 74, 86, 0.45);
+}
+
+/* Dark mode variables */
+.dark-mode {
+  --page: #1a1a2e;
+  --rose: #e94560;
+  --rose-deep: #ff6b6b;
+  --plum: #e8d5b7;
+  --plum-soft: #c9b896;
+  --ink: #b8c5d6;
+  --ink-soft: #8fa3b8;
+  --card: rgba(30, 30, 50, 0.85);
+  --card-solid: #252540;
+  --shadow: 0 18px 40px -22px rgba(233, 69, 96, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html.bg-page {
+  background: var(--page);
+}
+
+body {
+  position: relative;
+  font-family: var(--font-nunito-sans), "Nunito Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 80% -5%, #f7dfe0 0%, transparent 55%),
+    radial-gradient(1000px 700px at 10% 20%, #f3e6ea 0%, transparent 50%),
+    linear-gradient(180deg, #f7ecec 0%, #f4e7e9 40%, #f6eef0 70%, #f1e6ea 100%);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Dark mode body background */
+.dark-mode main {
+  background:
+    radial-gradient(1200px 600px at 80% -5%, #2a2a4a 0%, transparent 55%),
+    radial-gradient(1000px 700px at 10% 20%, #252545 0%, transparent 50%),
+    linear-gradient(180deg, #1a1a2e 0%, #1f1f3a 40%, #252540 70%, #1a1a30 100%);
+  flex: 1;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Decorative leaves ---------- */
+.leaf {
+  position: fixed;
+  width: 220px;
+  opacity: 0.9;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+/* Blue light effect for leaves in dark mode */
+.dark-mode .leaf {
+  /* Screen drops the newly black background and keeps light pixels */
+  mix-blend-mode: screen;
+
+  /* The filter chain is where the magic happens. Order matters! */
+  filter:
+    invert(1)           /* 1. Turns white bg to black, and dark leaf to light */
+    sepia(1)            /* 2. Gives the light leaf a solid baseline color */
+    saturate(5)         /* 3. Cranks up the color intensity */
+    hue-rotate(180deg)  /* 4. Shifts the color wheel to neon blue */
+    drop-shadow(0 0 15px rgba(100, 180, 255, 0.8))  /* 5. First glow layer */
+    drop-shadow(0 0 30px rgba(100, 180, 255, 0.4)); /* 6. Second glow layer */
+
+  opacity: 0.9;
+}
+.leaf--bottom-left {
+  left: -30px;
+  bottom: -20px;
+  transform: rotate(8deg);
+}
+.leaf--bottom-right {
+  right: -30px;
+  bottom: 40px;
+  transform: scaleX(-1) rotate(6deg);
+}
+
+@media (max-width: 860px) {
+  .leaf {
+    width: 140px;
+  }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--pill {
+  background: linear-gradient(180deg, #d38ea0, #c2748a);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 10px 22px -12px rgba(176, 101, 118, 0.9);
+}
+
+/* Dark mode buttons */
+.dark-mode .btn--pill {
+  background: linear-gradient(180deg, #e94560, #d63850);
+  box-shadow: 0 10px 22px -12px rgba(233, 69, 96, 0.7);
+}
+
+.dark-mode .btn--primary {
+  background: linear-gradient(180deg, #e94560, #d63850);
+  box-shadow: 0 16px 30px -14px rgba(233, 69, 96, 0.8);
+}
+.btn--primary {
+  background: linear-gradient(180deg, #d68ea1, #c1748a);
+  padding: 12px 30px;
+  font-size: 17px;
+  box-shadow: 0 16px 30px -14px rgba(176, 101, 118, 0.95);
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background: transparent;
+  border: 2px solid var(--plum-soft);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dark-mode-toggle:hover {
+  background: var(--plum-soft);
+  transform: scale(1.1);
+}
+
+.dark-mode .dark-mode-toggle {
+  border-color: var(--rose);
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background: var(--rose);
+}
