@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { scrollHandler } from "../../helpers/scrollHelper";
 
@@ -70,70 +71,57 @@ export default function Navigation({ darkMode, setDarkMode, onCelebrate }: Navig
           className={`nav__links${menuOpen ? " is-open" : ""}`}
         >
           <li>
-            <a
+            <Link
               href="/"
               className={isHome ? "is-active" : ""}
-              onClick={(e) => {
-                closeMenu();
-                if (!isHome) {
-                  e.preventDefault();
-                  router.push("/");
-                }
-              }}
+              onClick={closeMenu}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/programs"
               className={isProgramsPage ? "is-active" : ""}
-              onClick={(e) => {
-                e.preventDefault();
-                if (!isProgramsPage) {
-                  router.push("/programs");
-                }
-                closeMenu();
-              }}
+              onClick={closeMenu}
             >
               Programs
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/blog"
               className={isBlogPage ? "is-active" : ""}
-              onClick={(e) => {
-                e.preventDefault();
-                if (!isBlogPage) {
-                  router.push("/blog");
-                }
-                closeMenu();
-              }}
+              onClick={closeMenu}
             >
               Blog
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#stories" onClick={closeMenu}>
-              Success Stories
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
+            <Link
+              href="/#programs"
               onClick={(e) => {
                 closeMenu();
-                if (!isHome) {
-                  e.preventDefault();
-                  router.push("/#about");
-                } else {
+                if (isHome) {
+                  scrollTo(e, "#programs");
+                }
+              }}
+            >
+              Success Stories
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/#about"
+              onClick={(e) => {
+                closeMenu();
+                if (isHome) {
                   scrollTo(e, "#about");
                 }
               }}
             >
               About
-            </a>
+            </Link>
           </li>
         </ul>
         <button

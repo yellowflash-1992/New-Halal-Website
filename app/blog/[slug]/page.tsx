@@ -5,7 +5,7 @@ import BlogPostClient from "./BlogPostClient";
 import {
   getBlogPostBySlug,
   getRelatedPosts,
-  BLOG_POSTS,
+  ALL_BLOG_POSTS,
 } from "../../data/blogData";
 
 interface PageProps {
@@ -14,8 +14,8 @@ interface PageProps {
 
 // 1. Tell Next.js exactly what pages to pre-render statically at build time
 export async function generateStaticParams() {
-  // Maps through your blog array to feed all slugs to Next.js
-  return BLOG_POSTS.map((post) => ({
+  // Maps through your full blog array to feed all slugs to Next.js
+  return ALL_BLOG_POSTS.map((post) => ({
     slug: post.slug,
   }));
 }

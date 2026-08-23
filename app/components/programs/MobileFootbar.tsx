@@ -1,41 +1,20 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function MobileFootbar() {
   const pathname = usePathname();
-  const router = useRouter();
 
   const isHome = pathname === "/";
   const isPrograms = pathname === "/programs";
   const isBlog = pathname.startsWith("/blog");
 
-  const handleNav = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-    isExternalOrHash = false,
-  ) => {
-    if (isExternalOrHash) {
-      if (href.startsWith("#")) {
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-      return;
-    }
-
-    e.preventDefault();
-    router.push(href);
-  };
-
   return (
     <nav className="mobile-footbar" aria-label="Mobile bottom navigation">
-      <a
+      <Link
         href="/"
         className={`nav-item${isHome ? " is-active" : ""}`}
-        onClick={(e) => handleNav(e, "/")}
       >
         <svg
           className="nav-icon"
@@ -49,14 +28,13 @@ export default function MobileFootbar() {
           <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V9.5z" />
         </svg>
         <span>Home</span>
-      </a>
+      </Link>
 
       <div className="nav-divider" />
 
-      <a
+      <Link
         href="/programs"
         className={`nav-item${isPrograms ? " is-active" : ""}`}
-        onClick={(e) => handleNav(e, "/programs")}
       >
         <svg
           className="nav-icon"
@@ -71,20 +49,13 @@ export default function MobileFootbar() {
           <path d="M12 8l3 3-3 3" />
         </svg>
         <span>Programs</span>
-      </a>
+      </Link>
 
       <div className="nav-divider" />
 
-      <a
+      <Link
         href="/blog"
         className={`nav-item${isBlog ? " is-active" : ""}`}
-        onClick={(e) => {
-          if (isBlog) {
-            handleNav(e, "#community", true);
-          } else {
-            handleNav(e, "/blog");
-          }
-        }}
       >
         <div className="icon-wrapper">
           <svg
@@ -100,15 +71,22 @@ export default function MobileFootbar() {
           </svg>
           <span className="notification-dot" />
         </div>
-        <span>Community</span>
-      </a>
+        <span>Blog</span>
+      </Link>
 
       <div className="nav-divider" />
 
-      <a
-        href="#programs-about"
+      <Link
+        href={isPrograms ? "#programs-about" : "/#about"}
         className="nav-item"
-        onClick={(e) => handleNav(e, "#programs-about", true)}
+        onClick={(e) => {
+          const targetId = isPrograms ? "#programs-about" : "#about";
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       >
         <svg
           className="nav-icon"
@@ -122,7 +100,7 @@ export default function MobileFootbar() {
           <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" />
         </svg>
         <span>About</span>
-      </a>
+      </Link>
     </nav>
   );
 }

@@ -1,3 +1,5 @@
+import { getAssetPath } from "../../helpers/assetHelper";
+
 interface HeroProps {
   onCelebrate: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
@@ -6,7 +8,7 @@ export default function Hero({ onCelebrate }: HeroProps) {
   return (
     <section className="hero">
       <img
-        src="/hero.png"
+        src={getAssetPath("/hero.png")}
         alt="A smiling Muslim woman in a hijab tying her running shoe"
         className="hero__photo"
       />
@@ -14,7 +16,7 @@ export default function Hero({ onCelebrate }: HeroProps) {
       <div className="container hero__inner">
         <div className="hero__content">
           <img
-            src="/logo.png"
+            src={getAssetPath("/logo.png")}
             alt=""
             className="hero__emblem"
             aria-hidden="true"

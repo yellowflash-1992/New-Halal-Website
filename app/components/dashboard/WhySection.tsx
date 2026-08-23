@@ -1,4 +1,5 @@
 import WhyCard from "./WhyCard";
+import { getAssetPath } from "../../helpers/assetHelper";
 
 export default function WhySection() {
   return (
@@ -12,21 +13,21 @@ export default function WhySection() {
 
       <div className="why__grid">
         <WhyCard
-          image="/card-expert.png"
+          image={getAssetPath("/card-expert.png")}
           alt="Certified female trainer holding a tablet"
           title="Expert Guidance"
           text="Guidance from certified female trainers"
           variant="mint"
         />
         <WhyCard
-          image="/card-flexible.png"
+          image={getAssetPath("/card-flexible.png")}
           alt="Woman doing a home workout with light weights"
           title="Flexible & Halal"
           text="Workouts tailored to your lifestyle"
           variant="lavender"
         />
         <WhyCard
-          image="/card-community.png"
+          image={getAssetPath("/card-community.png")}
           alt="Three smiling Muslim women together"
           title="Inspiring Community"
           text="Join a motivating sisterhood"
