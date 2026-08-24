@@ -119,7 +119,7 @@ export default function BlogPostClient({
                 Sunnah nutrition, and mindful fitness.
               </p>
               <a
-                href="https://chat.whatsapp.com"
+                href="https://whatsapp.com/channel/0029Vb6fg6x0bIdnO0Je3T2Z"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn programs-about-box__whatsapp"
