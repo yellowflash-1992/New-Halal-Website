@@ -1,27 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito_Sans, Dancing_Script, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const nunitoSans = Nunito_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "800"],
-  variable: "--font-nunito-sans",
-  display: "swap",
-});
-
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-dancing-script",
-  display: "swap",
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-playfair-display",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Halal Fit-Sis — Empowering Muslim Women Through Fitness",
@@ -39,12 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`bg-page ${nunitoSans.variable} ${dancingScript.variable} ${playfairDisplay.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en" className="bg-page" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
+

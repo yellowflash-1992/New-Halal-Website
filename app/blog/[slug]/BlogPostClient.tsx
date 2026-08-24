@@ -1,7 +1,7 @@
 // app/blog/[slug]/BlogPostClient.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Navigation from "../../components/dashboard/Navigation";
 import DecorativeLeaves from "../../components/dashboard/DecorativeLeaves";
@@ -9,6 +9,7 @@ import Footer from "../../components/dashboard/Footer";
 import BlogCard from "../../components/blog/BlogCard";
 import CommunityFooter from "../../components/programs/CommunityFooter";
 import MobileFootbar from "../../components/programs/MobileFootbar";
+import { useDarkMode } from "../../helpers/useDarkMode";
 
 // Define a strict TypeScript type for your post data structure
 interface PostData {
@@ -32,7 +33,7 @@ export default function BlogPostClient({
   post,
   relatedPosts,
 }: BlogPostClientProps) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode();
 
   function celebrate(e: React.MouseEvent<HTMLButtonElement>) {
     const btn = e.currentTarget;
@@ -44,14 +45,6 @@ export default function BlogPostClient({
       btn.disabled = false;
     }, 1600);
   }
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
 
   return (
     <>

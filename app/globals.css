@@ -1,8 +1,13 @@
 @import "./dashboard.css";
 @import "./programs.css";
 @import "./blog.css";
+@import "./stories.css";
+@import "./about.css";
 
 :root {
+  --font-nunito-sans: "Nunito Sans", system-ui, -apple-system, sans-serif;
+  --font-dancing-script: "Dancing Script", cursive;
+  --font-playfair-display: "Playfair Display", Georgia, serif;
   --page: #f6ecec;
   --rose: #c97e8e; /* primary buttons / accents */
   --rose-deep: #b06576;

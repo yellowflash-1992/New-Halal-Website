@@ -8,7 +8,9 @@ export default function MobileFootbar() {
 
   const isHome = pathname === "/";
   const isPrograms = pathname === "/programs";
+  const isStories = pathname.startsWith("/stories") || pathname.startsWith("/success-stories");
   const isBlog = pathname.startsWith("/blog");
+  const isAbout = pathname.startsWith("/about");
 
   return (
     <nav className="mobile-footbar" aria-label="Mobile bottom navigation">
@@ -54,6 +56,26 @@ export default function MobileFootbar() {
       <div className="nav-divider" />
 
       <Link
+        href="/stories"
+        className={`nav-item${isStories ? " is-active" : ""}`}
+      >
+        <svg
+          className="nav-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+        <span>Stories</span>
+      </Link>
+
+      <div className="nav-divider" />
+
+      <Link
         href="/blog"
         className={`nav-item${isBlog ? " is-active" : ""}`}
       >
@@ -73,20 +95,11 @@ export default function MobileFootbar() {
         </div>
         <span>Blog</span>
       </Link>
-
       <div className="nav-divider" />
 
       <Link
-        href={isPrograms ? "#programs-about" : "/#about"}
-        className="nav-item"
-        onClick={(e) => {
-          const targetId = isPrograms ? "#programs-about" : "#about";
-          const target = document.querySelector(targetId);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        }}
+        href="/about"
+        className={`nav-item${isAbout ? " is-active" : ""}`}
       >
         <svg
           className="nav-icon"

@@ -1,15 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navigation from "./components/dashboard/Navigation";
 import DecorativeLeaves from "./components/dashboard/DecorativeLeaves";
 import Hero from "./components/dashboard/Hero";
 import FeatureCards from "./components/dashboard/FeatureCards";
+import StoriesPreview from "./components/dashboard/StoriesPreview";
 import WhySection from "./components/dashboard/WhySection";
 import Footer from "./components/dashboard/Footer";
+import { useDarkMode } from "./helpers/useDarkMode";
 
 export default function Page() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode();
 
   function celebrate(e: React.MouseEvent<HTMLButtonElement>) {
     const btn = e.currentTarget;
@@ -22,14 +24,6 @@ export default function Page() {
     }, 1600);
   }
 
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
-
   return (
     <>
       <DecorativeLeaves />
@@ -37,6 +31,7 @@ export default function Page() {
       <main className={darkMode ? "dark-mode" : ""}>
         <Hero onCelebrate={celebrate} />
         <FeatureCards />
+        <StoriesPreview />
         <WhySection />
         <Footer />
       </main>

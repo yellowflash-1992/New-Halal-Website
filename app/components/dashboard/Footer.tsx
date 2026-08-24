@@ -6,7 +6,21 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__container">
-        <section className="footer__social">
+        <div className="footer__join-callout">
+          <p className="footer__join-text">
+            Join a community of sisters committed to living healthier and more intentional lives
+          </p>
+          <a
+            href="https://chat.whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--pill footer__join-btn"
+          >
+            <span>🌸</span> Join the Sisterhood
+          </a>
+        </div>
+
+        <section className="footer__social" aria-label="Social media links">
           <a
             className="footer__social-link footer__social-link--facebook"
             href="#!"
@@ -66,10 +80,7 @@ export default function Footer() {
           </svg>
         </button>
         <div className="footer__copyright">
-          &copy; 2026 Yellowflash:
-          <a className="footer__copyright-link" href="#">
-            Halal Fit-Sis
-          </a>
+          &copy; 2026 Halal Fit-Sis | Powered by Ayaang Hub
         </div>
       </div>
     </footer>

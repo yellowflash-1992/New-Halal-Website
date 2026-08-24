@@ -1,0 +1,437 @@
+/* ---------- About Page CSS (Clean Sakura + Cream & Sky Blend) ---------- */
+
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:
+    radial-gradient(
+      1100px 600px at 15% -5%,
+      rgba(253, 235, 242, 0.75) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 85% 15%,
+      rgba(227, 240, 249, 0.7) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 600px at 50% 50%,
+      rgba(255, 248, 240, 0.8) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #fdfbf7 0%, #faf3eb 30%, #fcf4f7 65%, #f6f8fb 100%);
+  color: var(--ink);
+}
+
+.dark-mode .about-page {
+  background:
+    radial-gradient(
+      1100px 600px at 15% -5%,
+      rgba(65, 30, 48, 0.7) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 85% 15%,
+      rgba(26, 45, 75, 0.65) 0%,
+      transparent 55%
+    ),
+    linear-gradient(180deg, #181622 0%, #1e1b2b 30%, #251e2a 65%, #171c2b 100%);
+  color: #e2dbd4;
+}
+
+/* About Hero */
+.about-hero-section {
+  padding: 135px 0 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Prominent Larger Hero Photo */
+.about-hero-photo-wrap {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto 32px;
+}
+
+.about-hero-photo-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #ffffff;
+  box-shadow:
+    0 20px 45px -12px rgba(188, 163, 143, 0.45),
+    0 0 0 2px rgba(220, 205, 190, 0.5);
+  background: linear-gradient(135deg, #fcdde8 0%, #cce9f8 100%);
+  position: relative;
+}
+
+.dark-mode .about-hero-photo-circle {
+  border-color: #2b273a;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6);
+}
+
+.about-hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Decorative Sparkles */
+.about-sparkle {
+  position: absolute;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.about-sparkle-1 {
+  top: 10px;
+  left: -14px;
+  color: #bca38f;
+  font-size: 32px;
+  animation: pulse-sparkle 3s infinite ease-in-out;
+}
+
+.about-sparkle-2 {
+  top: 40px;
+  right: -12px;
+  color: #c97e8e;
+  font-size: 24px;
+  animation: pulse-sparkle 2.5s infinite ease-in-out 1s;
+}
+
+.about-sparkle-3 {
+  bottom: 18px;
+  left: 8px;
+  color: #74b9e7;
+  font-size: 22px;
+  animation: pulse-sparkle 3.5s infinite ease-in-out 0.5s;
+}
+
+/* Hero Title & Subtitle */
+.about-hero-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2.75rem;
+  line-height: 1.25;
+  color: #3e3934;
+  margin-bottom: 18px;
+}
+
+.dark-mode .about-hero-title {
+  color: #f0e6d6;
+}
+
+.about-hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 680px;
+  margin: 0 auto 10px;
+}
+
+.dark-mode .about-hero-subtitle {
+  color: #c4d3e8;
+}
+
+/* Story Card Section */
+.about-story-card {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px 36px;
+  border: 1px solid rgba(220, 205, 190, 0.5);
+  box-shadow: var(--shadow);
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.dark-mode .about-story-card {
+  background: var(--card-solid);
+  border-color: rgba(65, 60, 75, 0.6);
+}
+
+/* Our Mission Section */
+.about-mission-card {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px 36px;
+  border: 1px solid rgba(220, 205, 190, 0.5);
+  box-shadow: var(--shadow);
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.dark-mode .about-mission-card {
+  background: var(--card-solid);
+  border-color: rgba(65, 60, 75, 0.6);
+}
+
+.about-mission-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.75rem;
+  color: var(--plum);
+  margin-bottom: 18px;
+}
+
+.dark-mode .about-mission-title {
+  color: #f0e6d6;
+}
+
+.about-mission-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 680px;
+  margin: 0 auto 14px;
+}
+
+.about-mission-text:last-child {
+  margin-bottom: 0;
+}
+
+.dark-mode .about-mission-text {
+  color: #d6cfc7;
+}
+
+.about-mission-text--emphasis {
+  font-weight: 700;
+  color: var(--plum);
+}
+
+.dark-mode .about-mission-text--emphasis {
+  color: #e8d5b7;
+}
+
+.about-greeting-header {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #3e3934;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(220, 205, 190, 0.4);
+}
+
+.dark-mode .about-greeting-header {
+  color: #f0e6d6;
+  border-bottom-color: rgba(65, 60, 75, 0.5);
+}
+
+.about-heart-icon {
+  color: var(--rose);
+  font-size: 22px;
+}
+
+.about-coach-intro {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.about-coach-avatar-circle {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 20px -4px rgba(188, 163, 143, 0.4);
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #fcdde8 0%, #74b9e7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+.dark-mode .about-coach-avatar-circle {
+  border-color: #2b273a;
+}
+
+.about-coach-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.dark-mode .about-coach-lead {
+  color: #e2dbd4;
+}
+
+.about-coach-body-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.dark-mode .about-coach-body-text {
+  color: #d6cfc7;
+}
+
+.about-coach-conclusion {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--plum);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 700;
+  padding-top: 14px;
+  border-top: 1px solid rgba(220, 205, 190, 0.3);
+}
+
+.dark-mode .about-coach-conclusion {
+  color: #e8d5b7;
+}
+
+/* Philosophy Pillars */
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-bottom: 50px;
+}
+
+.about-pillar-card {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px 24px;
+  border: 1px solid rgba(220, 205, 190, 0.5);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 42px -18px rgba(122, 74, 86, 0.45);
+}
+
+.dark-mode .about-pillar-card {
+  background: var(--card-solid);
+  border-color: rgba(65, 60, 75, 0.6);
+}
+
+.about-pillar-card--mint {
+  border-top: 4px solid #82c49d;
+}
+
+.about-pillar-card--sky {
+  border-top: 4px solid #74b9e7;
+}
+
+.about-pillar-card--peach {
+  border-top: 4px solid #f4a261;
+}
+
+.about-pillar-icon {
+  font-size: 34px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.about-pillar-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.35rem;
+  color: var(--plum);
+  margin-bottom: 10px;
+}
+
+.dark-mode .about-pillar-title {
+  color: #f0e6d6;
+}
+
+.about-pillar-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* Closing Inspirational Note */
+.about-closing-note {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 50px;
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 18px;
+  border: 1px dashed rgba(201, 126, 142, 0.4);
+}
+
+.dark-mode .about-closing-note {
+  background: rgba(30, 27, 42, 0.65);
+  border-color: rgba(201, 126, 142, 0.3);
+}
+
+.about-closing-note p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.dark-mode .about-closing-note p {
+  color: #e2dbd4;
+}
+
+/* Responsive Styles */
+@media (max-width: 860px) {
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero-photo-wrap {
+    width: 270px;
+    height: 270px;
+  }
+  .about-story-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 580px) {
+  .about-hero-section {
+    padding: 105px 0 35px;
+  }
+  .about-hero-title {
+    font-size: 1.85rem;
+  }
+  .about-hero-photo-wrap {
+    width: 230px;
+    height: 230px;
+  }
+  .about-coach-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-greeting-header {
+    font-size: 1.25rem;
+  }
+}

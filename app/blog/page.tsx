@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Navigation from "../components/dashboard/Navigation";
 import DecorativeLeaves from "../components/dashboard/DecorativeLeaves";
 import Footer from "../components/dashboard/Footer";
@@ -10,9 +10,10 @@ import FeaturedBlogCard from "../components/blog/FeaturedBlogCard";
 import CommunityFooter from "../components/programs/CommunityFooter";
 import MobileFootbar from "../components/programs/MobileFootbar";
 import { ALL_BLOG_POSTS, BlogCategory } from "../data/blogData";
+import { useDarkMode } from "../helpers/useDarkMode";
 
 export default function BlogPage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode();
   const [selectedCategory, setSelectedCategory] = useState<BlogCategory>("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -26,14 +27,6 @@ export default function BlogPage() {
       btn.disabled = false;
     }, 1600);
   }
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
 
   // Filter blog posts by category and search query
   const filteredPosts = useMemo(() => {

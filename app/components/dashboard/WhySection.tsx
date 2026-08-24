@@ -6,9 +6,13 @@ export default function WhySection() {
     <section className="why container" id="about">
       <h2 className="why__title">Why Join Halal Fit-Sis?</h2>
       <p className="why__lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation.
+        Halal Fit-Sis is more than just a wellness brand. It is a safe and
+        supportive space for Muslim women who want to take care of their health
+        while staying connected to their deen. Here, we focus on balance,
+        discipline, and consistency. You do not need extreme diets or
+        unrealistic routines. Instead, you learn how to build a healthy
+        lifestyle that fits your daily life and helps you grow physically,
+        mentally, and spiritually.
       </p>
 
       <div className="why__grid">

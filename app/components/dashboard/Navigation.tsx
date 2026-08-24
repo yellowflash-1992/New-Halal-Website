@@ -19,6 +19,8 @@ export default function Navigation({ darkMode, setDarkMode, onCelebrate }: Navig
   const isHome = pathname === "/";
   const isProgramsPage = pathname === "/programs";
   const isBlogPage = pathname.startsWith("/blog");
+  const isStoriesPage = pathname.startsWith("/stories") || pathname.startsWith("/success-stories");
+  const isAboutPage = pathname.startsWith("/about");
 
   useEffect(() => {
     function closeOnEscape(e: KeyboardEvent) {
@@ -99,26 +101,18 @@ export default function Navigation({ darkMode, setDarkMode, onCelebrate }: Navig
           </li>
           <li>
             <Link
-              href="/#programs"
-              onClick={(e) => {
-                closeMenu();
-                if (isHome) {
-                  scrollTo(e, "#programs");
-                }
-              }}
+              href="/stories"
+              className={isStoriesPage ? "is-active" : ""}
+              onClick={closeMenu}
             >
               Success Stories
             </Link>
           </li>
           <li>
             <Link
-              href="/#about"
-              onClick={(e) => {
-                closeMenu();
-                if (isHome) {
-                  scrollTo(e, "#about");
-                }
-              }}
+              href="/about"
+              className={isAboutPage ? "is-active" : ""}
+              onClick={closeMenu}
             >
               About
             </Link>

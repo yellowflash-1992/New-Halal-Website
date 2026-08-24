@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navigation from "../components/dashboard/Navigation";
 import DecorativeLeaves from "../components/dashboard/DecorativeLeaves";
 import Footer from "../components/dashboard/Footer";
@@ -11,9 +11,10 @@ import WellnessTips from "../components/programs/WellnessTips";
 import AboutSection from "../components/programs/AboutSection";
 import CommunityFooter from "../components/programs/CommunityFooter";
 import MobileFootbar from "../components/programs/MobileFootbar";
+import { useDarkMode } from "../helpers/useDarkMode";
 
 export default function ProgramsPage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode();
 
   function celebrate(e: React.MouseEvent<HTMLButtonElement>) {
     const btn = e.currentTarget;
@@ -25,14 +26,6 @@ export default function ProgramsPage() {
       btn.disabled = false;
     }, 1600);
   }
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
 
   return (
     <>

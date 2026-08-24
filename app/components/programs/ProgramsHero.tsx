@@ -9,9 +9,10 @@ export default function ProgramsHero() {
   return (
     <section className="programs-hero">
       <div className="container programs-hero__container">
-        <h1 className="programs-hero__logo">HalalFitSis 🌙</h1>
+        <h1 className="programs-hero__logo">Halal Fit Kitchen 🍽️</h1>
         <p className="programs-hero__tagline">
-          Helping Muslim women nourish their bodies and souls.
+          Where nourishment meets intention — helping Muslim women nourish
+          their bodies and souls.
         </p>
         <button
           className="btn btn--primary programs-hero__cta"
