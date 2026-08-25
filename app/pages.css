@@ -1,0 +1,1512 @@
+/* ---------- New Pages CSS (Start Here, Coaches, Kitchen, Resources, Contact) ---------- */
+
+/* ---------- Start Here Page Background ---------- */
+.start-here-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:
+    radial-gradient(
+      1050px 600px at 20% -5%,
+      rgba(255, 230, 215, 0.75) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 85% 15%,
+      rgba(255, 218, 235, 0.7) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 500px at 45% 50%,
+      rgba(215, 240, 255, 0.55) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #fdf7f5 0%, #f3f8fd 30%, #fcf4f7 65%, #f3f7fb 100%);
+}
+
+.dark-mode .start-here-page {
+  background:
+    radial-gradient(
+      1050px 600px at 20% -5%,
+      rgba(60, 32, 22, 0.7) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 85% 15%,
+      rgba(75, 26, 55, 0.65) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 500px at 45% 50%,
+      rgba(20, 45, 75, 0.55) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #161426 0%, #1a1930 30%, #231728 65%, #141828 100%);
+}
+
+/* ---------- Coaches Page Background ---------- */
+.coaches-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:
+    radial-gradient(
+      1050px 600px at 22% -5%,
+      rgba(255, 220, 235, 0.75) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 80% 12%,
+      rgba(210, 245, 240, 0.7) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 500px at 50% 50%,
+      rgba(230, 235, 255, 0.6) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #faf4f7 0%, #f1faf7 30%, #fbf5fa 65%, #f0f6fa 100%);
+}
+
+.dark-mode .coaches-page {
+  background:
+    radial-gradient(
+      1050px 600px at 22% -5%,
+      rgba(75, 24, 52, 0.7) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 80% 12%,
+      rgba(18, 55, 50, 0.65) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      800px 500px at 50% 50%,
+      rgba(28, 32, 70, 0.55) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #161324 0%, #171f2a 30%, #221629 65%, #141a27 100%);
+}
+
+/* ---------- Halal Fit Kitchen Page Background ---------- */
+.kitchen-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:
+    radial-gradient(
+      1100px 650px at 15% -8%,
+      rgba(255, 228, 204, 0.75) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      950px 520px at 85% 12%,
+      rgba(206, 246, 228, 0.7) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      850px 500px at 45% 48%,
+      rgba(255, 235, 244, 0.65) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      750px 450px at 80% 80%,
+      rgba(255, 244, 215, 0.6) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #fdf9f5 0%, #f4fbf7 28%, #fef5f8 62%, #f5faf6 100%);
+}
+
+.dark-mode .kitchen-page {
+  background:
+    radial-gradient(
+      1100px 650px at 15% -8%,
+      rgba(65, 38, 24, 0.75) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      950px 520px at 85% 12%,
+      rgba(18, 55, 42, 0.7) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      850px 500px at 45% 48%,
+      rgba(60, 25, 45, 0.6) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #151821 0%, #1b2024 30%, #201925 65%, #141a20 100%);
+}
+
+/* ---------- Free Resources Page Background ---------- */
+.resources-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:
+    radial-gradient(
+      1100px 650px at 18% -6%,
+      rgba(226, 232, 255, 0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      950px 520px at 85% 14%,
+      rgba(255, 224, 238, 0.75) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      850px 500px at 50% 50%,
+      rgba(214, 246, 240, 0.6) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      800px 450px at 15% 85%,
+      rgba(235, 225, 255, 0.55) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #f8f6fd 0%, #f1f7fd 28%, #fcf4f8 62%, #f2f8f6 100%);
+}
+
+.dark-mode .resources-page {
+  background:
+    radial-gradient(
+      1100px 650px at 18% -6%,
+      rgba(35, 32, 75, 0.75) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      950px 520px at 85% 14%,
+      rgba(70, 24, 52, 0.65) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      850px 500px at 50% 50%,
+      rgba(18, 50, 65, 0.55) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #141528 0%, #1a1a33 30%, #22182c 65%, #13172b 100%);
+}
+
+/* ---------- Contact Page Background ---------- */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background:
+    radial-gradient(
+      1100px 600px at 15% -5%,
+      rgba(255, 224, 235, 0.8) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      950px 520px at 85% 12%,
+      rgba(210, 240, 255, 0.75) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      850px 500px at 45% 55%,
+      rgba(248, 232, 255, 0.6) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #faf3f6 0%, #f0f6fc 30%, #fdf5f8 65%, #f4f3fa 100%);
+}
+
+.dark-mode .contact-page {
+  background:
+    radial-gradient(
+      1100px 600px at 15% -5%,
+      rgba(75, 25, 50, 0.7) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      950px 520px at 85% 12%,
+      rgba(22, 52, 85, 0.65) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      850px 500px at 45% 55%,
+      rgba(45, 28, 65, 0.55) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #161528 0%, #1a1c32 30%, #241829 65%, #151829 100%);
+}
+
+/* ---------- Start Here Page ---------- */
+.start-hero {
+  padding: 135px 0 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.start-hero__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2.75rem;
+  color: var(--plum);
+  margin: 18px 0 14px;
+}
+
+.dark-mode .start-hero__title {
+  color: #e8d5b7;
+}
+
+.start-hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.start-steps {
+  padding: 30px 0 60px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 760px;
+}
+
+.start-step-card {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 26px 24px;
+  border: 1px solid rgba(186, 224, 248, 0.5);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.start-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px -18px rgba(122, 74, 86, 0.45);
+}
+
+.start-step-card__icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fcdde8 0%, #cce9f8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(116, 185, 231, 0.35);
+}
+
+.dark-mode .start-step-card__icon {
+  border-color: #2b273a;
+}
+
+.start-step-card__step {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rose-deep);
+}
+
+.start-step-card__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: var(--plum);
+  margin: 4px 0 8px;
+}
+
+.dark-mode .start-step-card__title {
+  color: #e8d5b7;
+}
+
+.start-step-card__desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.start-step-card__cta {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* ---------- Coaches Page ---------- */
+.coaches-hero {
+  padding: 135px 0 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.coaches-hero__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2.75rem;
+  color: var(--plum);
+  margin: 18px 0 14px;
+}
+
+.dark-mode .coaches-hero__title {
+  color: #e8d5b7;
+}
+
+.coaches-hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.coaches-grid {
+  padding: 30px 0 60px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.coach-card {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 32px 26px;
+  border: 1px solid rgba(186, 224, 248, 0.5);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.coach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px -18px rgba(122, 74, 86, 0.5);
+}
+
+.coach-card__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #fcdde8 0%, #74b9e7 100%);
+  border: 4px solid #fff;
+  box-shadow: 0 8px 20px -4px rgba(188, 163, 143, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+}
+
+.dark-mode .coach-card__avatar {
+  border-color: #2b273a;
+}
+
+.coach-card__name {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: var(--plum);
+  margin-bottom: 4px;
+}
+
+.dark-mode .coach-card__name {
+  color: #e8d5b7;
+}
+
+.coach-card__role {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rose-deep);
+  margin-bottom: 14px;
+}
+
+.coach-card__bio {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.coach-card__focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.coach-card__tag {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2b7cb5;
+  background: rgba(116, 185, 231, 0.16);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.dark-mode .coach-card__tag {
+  color: #a5d8ff;
+  background: rgba(58, 134, 200, 0.25);
+}
+
+/* ---------- Resources Page ---------- */
+.resources-hero {
+  padding: 135px 0 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.resources-hero__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2.75rem;
+  color: var(--plum);
+  margin: 18px 0 14px;
+}
+
+.dark-mode .resources-hero__title {
+  color: #e8d5b7;
+}
+
+.resources-hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.resources-freebies {
+  padding: 30px 0 20px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.resource-card {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 28px 24px;
+  border: 1px solid rgba(186, 224, 248, 0.5);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px -18px rgba(122, 74, 86, 0.45);
+}
+
+.resource-card__icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.resource-card__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.3rem;
+  color: var(--plum);
+  margin-bottom: 8px;
+}
+
+.dark-mode .resource-card__title {
+  color: #e8d5b7;
+}
+
+.resource-card__desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.resource-card__btn {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.resources-blog {
+  padding: 40px 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Contact Page ---------- */
+.contact-hero {
+  padding: 135px 0 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-hero__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2.75rem;
+  color: var(--plum);
+  margin: 18px 0 14px;
+}
+
+.dark-mode .contact-hero__title {
+  color: #e8d5b7;
+}
+
+.contact-hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  padding: 30px 0 60px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.contact-info {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 32px 28px;
+  border: 1px solid rgba(186, 224, 248, 0.5);
+  box-shadow: var(--shadow);
+}
+
+.contact-info__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--plum);
+  margin-bottom: 12px;
+}
+
+.dark-mode .contact-info__title {
+  color: #e8d5b7;
+}
+
+.contact-info__text {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+.contact-info__socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 22px;
+}
+
+.contact-info__socials a {
+  color: var(--rose);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-info__socials a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 32px 28px;
+  border: 1px solid rgba(186, 224, 248, 0.5);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form__title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--plum);
+  margin-bottom: 4px;
+}
+
+.dark-mode .contact-form__title {
+  color: #e8d5b7;
+}
+
+.contact-form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--plum-soft);
+}
+
+.dark-mode .contact-form__label {
+  color: #e8d5b7;
+}
+
+.contact-form__input {
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--card-solid);
+  border: 1px solid rgba(122, 74, 86, 0.18);
+  border-radius: 12px;
+  padding: 12px 14px;
+  outline: none;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.dark-mode .contact-form__input {
+  background: #252540;
+  border-color: rgba(100, 80, 120, 0.4);
+  color: #e8d5b7;
+}
+
+.contact-form__input:focus {
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(201, 126, 142, 0.18);
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form__submit {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto 0;
+  text-align: center;
+  padding: 12px 36px;
+}
+
+.contact-form__success {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.contact-form__success-icon {
+  font-size: 44px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.contact-form__success h3 {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: var(--plum);
+  margin-bottom: 10px;
+}
+
+.dark-mode .contact-form__success h3 {
+  color: #e8d5b7;
+}
+
+.contact-form__success p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* ---------- Charity Page & Floating Widget CSS ---------- */
+
+/* Floating Widget Container */
+.charity-widget-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 150;
+  pointer-events: auto;
+}
+
+.charity-floating-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7a4a56 0%, #c97e8e 50%, #b06576 100%);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 28px -6px rgba(122, 74, 86, 0.55);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.charity-floating-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 32px -6px rgba(122, 74, 86, 0.7);
+}
+
+.charity-floating-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.charity-btn-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.charity-btn-text {
+  letter-spacing: 0.02em;
+}
+
+.charity-text-desktop {
+  display: inline;
+}
+
+.charity-text-mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .charity-text-desktop {
+    display: none;
+  }
+  .charity-text-mobile {
+    display: inline;
+  }
+}
+
+.charity-btn-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 999px;
+  border: 2px solid #c97e8e;
+  animation: charityPulse 2.4s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes charityPulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.12);
+    opacity: 0;
+  }
+}
+
+/* Modal Backdrop */
+.charity-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 20, 30, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.charity-modal-card {
+  background: var(--card-solid);
+  border: 1px solid rgba(201, 126, 142, 0.35);
+  border-radius: 26px;
+  padding: 32px 28px;
+  max-width: 490px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px -15px rgba(80, 40, 55, 0.5);
+  position: relative;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(16px) scale(0.97);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.charity-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.charity-modal-badge {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rose-deep);
+  background: rgba(201, 126, 142, 0.14);
+  padding: 4px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.charity-modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(122, 74, 86, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--plum);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s ease;
+}
+
+.charity-modal-close:hover {
+  background: rgba(201, 126, 142, 0.2);
+}
+
+.charity-modal-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: var(--plum);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.dark-mode .charity-modal-title {
+  color: #f0e6d6;
+}
+
+.charity-modal-subtitle {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.charity-section-label {
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--plum);
+  margin-bottom: 8px;
+}
+
+.dark-mode .charity-section-label {
+  color: #e8d5b7;
+}
+
+.charity-causes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.charity-cause-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(201, 126, 142, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.charity-cause-pill:hover,
+.charity-cause-pill.is-selected {
+  border-color: var(--rose);
+  background: rgba(201, 126, 142, 0.14);
+}
+
+.charity-cause-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.charity-cause-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.charity-cause-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--plum);
+}
+
+.dark-mode .charity-cause-title {
+  color: #e8d5b7;
+}
+
+.charity-cause-desc {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+
+.charity-amounts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.charity-amount-btn {
+  padding: 8px 4px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(201, 126, 142, 0.25);
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--plum);
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.charity-amount-btn:hover,
+.charity-amount-btn.is-selected,
+.charity-amount-btn.is-active {
+  border-color: var(--rose);
+  background: var(--rose);
+  color: #ffffff;
+}
+
+.charity-custom-input-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 8px;
+}
+
+.charity-currency-prefix {
+  position: absolute;
+  left: 12px;
+  font-weight: 800;
+  color: var(--plum);
+  font-size: 15px;
+}
+
+.charity-custom-input {
+  width: 100%;
+  padding: 10px 12px 10px 28px;
+  border-radius: 12px;
+  border: 1.5px solid var(--rose);
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+  background: #ffffff;
+  color: var(--plum);
+}
+
+.charity-impact-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  background: rgba(201, 126, 142, 0.1);
+  border-radius: 10px;
+  font-size: 11.5px;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.charity-impact-check {
+  color: #128c7e;
+  font-weight: 900;
+}
+
+.charity-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.charity-submit-btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14.5px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7a4a56 0%, #c97e8e 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 20px -6px rgba(122, 74, 86, 0.6);
+  cursor: pointer;
+}
+
+.charity-submit-btn:hover {
+  transform: translateY(-1px);
+}
+
+.charity-learn-more-link {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--rose-deep);
+  text-decoration: none;
+  text-align: center;
+  padding: 4px;
+}
+
+.charity-learn-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Dedicated Charity Page Styles */
+.charity-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.charity-hero-section {
+  padding: 135px 0 40px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.charity-page-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2.75rem;
+  color: var(--plum);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.dark-mode .charity-page-title {
+  color: #f0e6d6;
+}
+
+.charity-page-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* Memorial Tribute Card */
+.charity-memorial-card {
+  background: linear-gradient(135deg, rgba(253, 246, 248, 0.95) 0%, rgba(248, 238, 242, 0.95) 100%);
+  border: 1.5px solid rgba(201, 126, 142, 0.35);
+  border-radius: 24px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: 0 16px 40px -18px rgba(122, 74, 86, 0.25);
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.dark-mode .charity-memorial-card {
+  background: linear-gradient(135deg, rgba(32, 28, 45, 0.95) 0%, rgba(26, 22, 38, 0.95) 100%);
+  border-color: rgba(233, 69, 96, 0.3);
+  box-shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.6);
+}
+
+.charity-memorial-badge {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rose-deep);
+  background: rgba(201, 126, 142, 0.16);
+  padding: 5px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.charity-memorial-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.85rem;
+  color: var(--plum);
+  margin-bottom: 12px;
+}
+
+.dark-mode .charity-memorial-title {
+  color: #f0e6d6;
+}
+
+.charity-memorial-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.dark-mode .charity-memorial-text {
+  color: #e2dbd4;
+}
+
+.charity-memorial-hadith {
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 16px;
+  border: 1px dashed rgba(201, 126, 142, 0.4);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--plum);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.dark-mode .charity-memorial-hadith {
+  background: rgba(20, 18, 30, 0.65);
+  border-color: rgba(233, 69, 96, 0.3);
+  color: #e8d5b7;
+}
+
+.charity-pillars-section {
+  padding: 20px 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.charity-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.charity-page-card {
+  background: var(--card);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 32px 26px;
+  border: 1px solid rgba(201, 126, 142, 0.3);
+  box-shadow: var(--shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.charity-page-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px -16px rgba(122, 74, 86, 0.35);
+}
+
+.dark-mode .charity-page-card {
+  background: var(--card-solid);
+  border-color: rgba(233, 69, 96, 0.25);
+}
+
+.charity-page-card-icon {
+  font-size: 38px;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.charity-page-card-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: var(--plum);
+  margin-bottom: 10px;
+}
+
+.dark-mode .charity-page-card-title {
+  color: #e8d5b7;
+}
+
+.charity-page-card-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.charity-page-card-impact {
+  padding: 8px 12px;
+  background: rgba(201, 126, 142, 0.12);
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--rose-deep);
+}
+
+.impact-tag {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+/* Dedicated Donation Box */
+.charity-donation-section {
+  padding: 20px 0 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.charity-donation-box {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--card);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 26px;
+  padding: 40px 36px;
+  border: 1.5px solid rgba(201, 126, 142, 0.35);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.dark-mode .charity-donation-box {
+  background: var(--card-solid);
+  border-color: rgba(233, 69, 96, 0.35);
+}
+
+.charity-box-title {
+  font-family: var(--font-playfair-display), "Playfair Display", serif;
+  font-size: 2rem;
+  color: var(--plum);
+  margin-bottom: 10px;
+}
+
+.dark-mode .charity-box-title {
+  color: #f0e6d6;
+}
+
+.charity-box-subtitle {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 26px;
+}
+
+.charity-box-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.charity-form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--plum);
+  margin-bottom: 10px;
+}
+
+.dark-mode .charity-form-label {
+  color: #e8d5b7;
+}
+
+.charity-cause-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.charity-cause-btn {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(201, 126, 142, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--plum);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.charity-cause-btn:hover,
+.charity-cause-btn.is-active {
+  border-color: var(--rose);
+  background: rgba(201, 126, 142, 0.16);
+  color: var(--rose-deep);
+}
+
+.charity-amount-select-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.charity-main-donate-btn {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.charity-transparency-pledge {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(201, 126, 142, 0.3);
+}
+
+.pledge-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--plum);
+  margin-bottom: 4px;
+}
+
+.dark-mode .pledge-title {
+  color: #e8d5b7;
+}
+
+.pledge-text {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* Responsive Floating Widget & Charity Page */
+@media (max-width: 860px) {
+  .charity-widget-container {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    right: 14px;
+  }
+  .charity-floating-btn {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+  .charity-grid-cards {
+    grid-template-columns: 1fr;
+  }
+  .charity-cause-select-grid {
+    grid-template-columns: 1fr;
+  }
+  .charity-page-title {
+    font-size: 2.1rem;
+  }
+  .charity-donation-box {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  .charity-hero-section {
+    padding: 105px 0 30px;
+  }
+  .charity-page-title {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .coaches-grid,
+  .resources-freebies {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .start-hero__title,
+  .coaches-hero__title,
+  .resources-hero__title,
+  .contact-hero__title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .kitchen-page {
+    padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 580px) {
+  .start-hero,
+  .coaches-hero,
+  .resources-hero,
+  .contact-hero {
+    padding: 110px 0 24px;
+  }
+  .start-hero__title,
+  .coaches-hero__title,
+  .resources-hero__title,
+  .contact-hero__title {
+    font-size: 1.8rem;
+  }
+  .start-step-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .start-step-card__cta {
+    margin: 0 auto;
+  }
+  .contact-form__submit {
+    width: 100%;
+    max-width: 280px;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+}

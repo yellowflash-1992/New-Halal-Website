@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import Navigation from "../components/dashboard/Navigation";
+import { useMemo, useState } from "react";
+import BlogCard from "../components/blog/BlogCard";
+import BlogHero from "../components/blog/BlogHero";
+import FeaturedBlogCard from "../components/blog/FeaturedBlogCard";
 import DecorativeLeaves from "../components/dashboard/DecorativeLeaves";
 import Footer from "../components/dashboard/Footer";
-import BlogHero from "../components/blog/BlogHero";
-import BlogCard from "../components/blog/BlogCard";
-import FeaturedBlogCard from "../components/blog/FeaturedBlogCard";
+import Navigation from "../components/dashboard/Navigation";
 import CommunityFooter from "../components/programs/CommunityFooter";
 import MobileFootbar from "../components/programs/MobileFootbar";
 import { ALL_BLOG_POSTS, BlogCategory } from "../data/blogData";

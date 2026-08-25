@@ -42,6 +42,24 @@ export default function AboutPage() {
     },
   ];
 
+  const charityPillars = [
+    {
+      icon: "🌸",
+      title: "Maternal & Women's Healthcare",
+      desc: "Providing clean birth kits, pre-natal nutritional support, and maternal wellness care to vulnerable mothers in underserved Muslim communities.",
+    },
+    {
+      icon: "💧",
+      title: "Clean Water (Sadaqah Jariyah)",
+      desc: "Funding sustainable community water wells and solar pump systems to bring life-giving clean water as ongoing Sadaqah Jariyah.",
+    },
+    {
+      icon: "🍲",
+      title: "Wholesome Food Aid & Ramadan Hampers",
+      desc: "Distributing balanced Sunnah superfood packages and Suhoor/Iftar hampers to widowed sisters, orphans, and families in need.",
+    },
+  ];
+
   return (
     <>
       <DecorativeLeaves />
@@ -59,7 +77,7 @@ export default function AboutPage() {
               className="stories-hero__badge"
               style={{ marginBottom: "24px" }}
             >
-              <span>🌸</span> Sisterhood Wellness &amp; Lifestyle{" "}
+              <span>🌸</span> About Us • Halal Fit-Sis Sisterhood{" "}
               <span>✨</span>
             </span>
 
@@ -202,6 +220,42 @@ export default function AboutPage() {
                 <p className="about-pillar-desc">{pillar.desc}</p>
               </article>
             ))}
+          </section>
+
+          {/* ================= CHARITY FOUNDATION & SADAQAH JARIYAH ================= */}
+          <section className="about-charity-card" aria-label="Halal Fit-Sis Charity Foundation">
+            <span className="stories-hero__badge" style={{ marginBottom: "16px" }}>
+              <span>🤲</span> Sadaqah Jariyah • Sisterhood Giving <span>🤍</span>
+            </span>
+            <h2 className="about-charity-title">
+              Halal Fit-Sis Giving &amp; Charity Foundation
+            </h2>
+            <p className="about-charity-subtitle">
+              True wellness is rooted in gratitude and giving back. A committed percentage of
+              every program enrollment, recipe guide, and membership directly funds clean water wells,
+              maternal healthcare, and food relief for vulnerable Muslim women and orphans worldwide.
+            </p>
+
+            <div className="about-charity-grid">
+              {charityPillars.map((item, idx) => (
+                <article key={idx} className="about-charity-item">
+                  <span className="about-charity-icon" aria-hidden="true">
+                    {item.icon}
+                  </span>
+                  <h3 className="about-charity-item-title">{item.title}</h3>
+                  <p className="about-charity-item-desc">{item.desc}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="about-charity-footer">
+              <p className="about-charity-quote">
+                ✨ <em>&ldquo;The believer&apos;s shade on the Day of Resurrection will be her charity.&rdquo;</em> (Al-Tirmidhi)
+              </p>
+              <p className="about-charity-note">
+                When you invest in your health with Halal Fit-Sis, you are directly uplifting a sister in need.
+              </p>
+            </div>
           </section>
 
           {/* ================= CLOSING INSPIRATIONAL NOTE ================= */}

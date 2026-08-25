@@ -6,10 +6,13 @@ import { usePathname } from "next/navigation";
 export default function MobileFootbar() {
   const pathname = usePathname();
 
-  const isHome = pathname === "/";
-  const isPrograms = pathname === "/programs";
-  const isStories = pathname.startsWith("/stories") || pathname.startsWith("/success-stories");
-  const isBlog = pathname.startsWith("/blog");
+  const isHome = pathname === "/" || pathname === "/start-here";
+  const isPrograms =
+    pathname.startsWith("/programs") || pathname.startsWith("/halal-fit-kitchen");
+  const isStories =
+    pathname.startsWith("/stories") || pathname.startsWith("/success-stories");
+  const isBlog =
+    pathname.startsWith("/blog") || pathname.startsWith("/resources");
   const isAbout = pathname.startsWith("/about");
 
   return (

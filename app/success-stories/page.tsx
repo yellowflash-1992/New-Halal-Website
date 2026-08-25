@@ -1,1 +1,5 @@
-export { default } from "../stories/page";
+import { redirect } from "next/navigation";
+
+export default function SuccessStoriesAliasPage() {
+  redirect("/stories");
+}

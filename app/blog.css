@@ -141,7 +141,9 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .blog-featured:hover {
@@ -302,7 +304,9 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .blog-card:hover {
@@ -408,7 +412,9 @@
   font-weight: 700;
   color: var(--rose);
   text-decoration: none;
-  transition: transform 0.18s ease, color 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    color 0.18s ease;
 }
 
 .blog-card__link:hover {
@@ -670,8 +676,20 @@
     padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px));
   }
 
-  .blog-desktop-footer {
+  .footer__container {
     display: none;
+  }
+  .footer__bottom {
+    display: flex;
+  }
+
+  /* Hide the floating mobile back-to-top button */
+  .footer__mobile-back-to-top {
+    display: none;
+  }
+
+  .b-t-t {
+    margin-bottom: -50px;
   }
 }
 

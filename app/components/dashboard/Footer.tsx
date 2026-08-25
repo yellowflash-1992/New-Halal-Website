@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Logo from "../common/Logo";
+
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -6,9 +9,129 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__container">
+        {/* Brand Logo & Tagline */}
+        <div className="footer__brand-block" style={{ marginBottom: "20px" }}>
+          <Link
+            href="/"
+            aria-label="Halal Fit-Sis Home"
+            style={{ display: "inline-block", textDecoration: "none" }}
+          >
+            <Logo variant="stacked" size="md" showSubtitle={true} />
+          </Link>
+        </div>
+
+        {/* Sitemap navigation links */}
+        <nav
+          className="footer__nav"
+          aria-label="Footer Navigation"
+          style={{ marginBottom: "24px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "16px 24px",
+              fontSize: "14px",
+              fontWeight: 600,
+            }}
+          >
+            <Link
+              href="/"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Home
+            </Link>
+            <Link
+              href="/start-here"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Start Here
+            </Link>
+            <Link
+              href="/programs"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Programs
+            </Link>
+            <Link
+              href="/stories"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Success Stories
+            </Link>
+            <Link
+              href="/halal-fit-kitchen"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Halal Kitchen
+            </Link>
+            <Link
+              href="/about"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/about/coaches"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Meet the Coaches
+            </Link>
+            <Link
+              href="/charity"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Charity & Giving
+            </Link>
+            <Link
+              href="/blog"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/resources"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Free Resources
+            </Link>
+            <Link
+              href="/contact"
+              style={{ color: "var(--plum-soft)", textDecoration: "none" }}
+            >
+              Contact
+            </Link>
+          </div>
+        </nav>
+
+        {/* Charity & Sadaqah Jariyah Foundation subtle note */}
+        <div
+          className="footer__charity-mention"
+          style={{
+            maxWidth: "540px",
+            margin: "0 auto 20px",
+            padding: "8px 18px",
+            borderRadius: "999px",
+            background: "rgba(201, 126, 142, 0.12)",
+            border: "1px solid rgba(201, 126, 142, 0.25)",
+            fontSize: "12.5px",
+            fontWeight: 600,
+            color: "var(--plum)",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+            lineHeight: 1.4,
+          }}
+        >
+          <span>🤲</span> A percentage of every membership supports our{" "}
+          <strong>Sisterhood Charity Foundation</strong> (Sadaqah Jariyah)
+        </div>
+
         <div className="footer__join-callout">
           <p className="footer__join-text">
-            Join a community of sisters committed to living healthier and more intentional lives
+            Join a community of sisters committed to living healthier and more
+            intentional lives
           </p>
           <a
             href="https://chat.whatsapp.com"
@@ -75,7 +198,14 @@ export default function Footer() {
           onClick={scrollToTop}
           aria-label="Back to top"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+          >
             <path d="M18 15l-6-6-6 6" />
           </svg>
         </button>

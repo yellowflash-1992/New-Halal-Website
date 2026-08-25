@@ -1,19 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import Navigation from "../components/dashboard/Navigation";
 import DecorativeLeaves from "../components/dashboard/DecorativeLeaves";
 import Footer from "../components/dashboard/Footer";
-import ProgramsPageHero from "../components/programs/ProgramsPageHero";
+import ProgramsHero from "../components/programs/ProgramsHero";
+import HalalFitKitchen from "../components/programs/HalalFitKitchen";
 import FeaturedMeals from "../components/programs/FeaturedMeals";
 import MealPlans from "../components/programs/MealPlans";
 import WellnessTips from "../components/programs/WellnessTips";
-import AboutSection from "../components/programs/AboutSection";
 import CommunityFooter from "../components/programs/CommunityFooter";
 import MobileFootbar from "../components/programs/MobileFootbar";
 import { useDarkMode } from "../helpers/useDarkMode";
 
-export default function ProgramsPage() {
+export default function HalalFitKitchenPage() {
   const [darkMode, setDarkMode] = useDarkMode();
 
   function celebrate(e: React.MouseEvent<HTMLButtonElement>) {
@@ -30,18 +29,24 @@ export default function ProgramsPage() {
   return (
     <>
       <DecorativeLeaves />
-      <Navigation darkMode={darkMode} setDarkMode={setDarkMode} onCelebrate={celebrate} />
-      <main className={darkMode ? "dark-mode programs-page" : "programs-page"}>
-        <ProgramsPageHero />
+      <Navigation
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+        onCelebrate={celebrate}
+      />
+
+      <main className={darkMode ? "dark-mode kitchen-page" : "kitchen-page"}>
+        <ProgramsHero />
+        <HalalFitKitchen />
         <FeaturedMeals />
         <MealPlans />
         <WellnessTips />
-        <AboutSection />
         <CommunityFooter />
         <div className="programs-desktop-footer">
           <Footer />
         </div>
       </main>
+
       <MobileFootbar />
     </>
   );

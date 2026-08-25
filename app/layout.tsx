@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import CharityFloatingWidget from "./components/common/CharityFloatingWidget";
 
 export const metadata: Metadata = {
   title: "Halal Fit-Sis — Empowering Muslim Women Through Fitness",
@@ -26,7 +27,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <CharityFloatingWidget />
+      </body>
     </html>
   );
 }
