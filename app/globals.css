@@ -75,7 +75,7 @@ main {
 }
 
 .container {
-  width: min(1120px, 92%);
+  width: min(1180px, 92%);
   margin-inline: auto;
 }
 
@@ -100,12 +100,11 @@ img {
   mix-blend-mode: screen;
 
   /* The filter chain is where the magic happens. Order matters! */
-  filter:
-    invert(1)           /* 1. Turns white bg to black, and dark leaf to light */
-    sepia(1)            /* 2. Gives the light leaf a solid baseline color */
-    saturate(5)         /* 3. Cranks up the color intensity */
-    hue-rotate(180deg)  /* 4. Shifts the color wheel to neon blue */
-    drop-shadow(0 0 15px rgba(100, 180, 255, 0.8))  /* 5. First glow layer */
+  filter: invert(1) /* 1. Turns white bg to black, and dark leaf to light */
+    sepia(1) /* 2. Gives the light leaf a solid baseline color */ saturate(5)
+    /* 3. Cranks up the color intensity */ hue-rotate(180deg)
+    /* 4. Shifts the color wheel to neon blue */
+    drop-shadow(0 0 15px rgba(100, 180, 255, 0.8)) /* 5. First glow layer */
     drop-shadow(0 0 30px rgba(100, 180, 255, 0.4)); /* 6. Second glow layer */
 
   opacity: 0.9;

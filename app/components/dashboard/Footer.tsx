@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "../common/Logo";
+import { getAssetPath } from "../../helpers/assetHelper";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -16,7 +16,11 @@ export default function Footer() {
             aria-label="Halal Fit-Sis Home"
             style={{ display: "inline-block", textDecoration: "none" }}
           >
-            <Logo variant="stacked" size="md" showSubtitle={true} />
+            <img
+              src={getAssetPath("/new-logo.png")}
+              alt="Halal Fit-Sis"
+              className="footer__brand-img"
+            />
           </Link>
         </div>
 

@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { getAssetPath } from "../../helpers/assetHelper";
 import { scrollHandler } from "../../helpers/scrollHelper";
-import Logo from "../common/Logo";
+import HomepageSearch from "./HomepageSearch";
 
 interface NavigationProps {
   darkMode: boolean;
@@ -141,7 +142,7 @@ export default function Navigation({
     name: string,
     label: string,
     items: DropdownItem[],
-    isActive: boolean
+    isActive: boolean,
   ) {
     const isOpen = openDropdown === name;
     return (
@@ -182,10 +183,14 @@ export default function Navigation({
                 className={`nav__dropdown-link${pathname === item.href ? " is-active" : ""}`}
                 onClick={closeMenu}
               >
-                {item.icon && <span className="nav__dropdown-icon">{item.icon}</span>}
+                {item.icon && (
+                  <span className="nav__dropdown-icon">{item.icon}</span>
+                )}
                 <div className="nav__dropdown-item-text">
                   <span className="nav__dropdown-title">{item.label}</span>
-                  {item.desc && <span className="nav__dropdown-desc">{item.desc}</span>}
+                  {item.desc && (
+                    <span className="nav__dropdown-desc">{item.desc}</span>
+                  )}
                 </div>
               </Link>
             </li>
@@ -230,7 +235,11 @@ export default function Navigation({
           onClick={closeMenu}
           aria-label="Halal Fit-Sis Home"
         >
-          <Logo variant="horizontal" size="sm" isDark={darkMode} />
+          <img
+            src={getAssetPath("/new-logo.png")}
+            alt="Halal Fit-Sis"
+            className="nav__brand-img"
+          />
         </Link>
 
         {/* Desktop & Mobile Navigation Links */}
@@ -241,7 +250,12 @@ export default function Navigation({
           {/* Mobile Drawer Header with Logo */}
           <li className="nav__mobile-header" aria-hidden="true">
             <Link href="/" onClick={closeMenu} className="nav__mobile-logo">
-              <Logo variant="horizontal" size="sm" isDark={darkMode} />
+              <img
+                src={getAssetPath("/new-logo.png")}
+                alt="Halal Fit-Sis"
+                className="nav__mobile-logo-img"
+              />
+              <span className="nav__mobile-brand-title">Halal Fit-Sis</span>
             </Link>
           </li>
 
@@ -268,7 +282,12 @@ export default function Navigation({
           </li>
 
           {/* 2. Programs ▾ (Our Programs, Success Stories) */}
-          {renderDropdown("programs", "Programs", programsItems, isProgramsActive)}
+          {renderDropdown(
+            "programs",
+            "Programs",
+            programsItems,
+            isProgramsActive,
+          )}
 
           {/* 3. Halal Kitchen */}
           <li className="nav__item">
@@ -277,7 +296,7 @@ export default function Navigation({
               className={isKitchenPage ? "is-active" : ""}
               onClick={closeMenu}
             >
-              Halal Kitchen
+              Halal-Fit-Kitchen
             </Link>
           </li>
 
@@ -293,7 +312,9 @@ export default function Navigation({
               <span className="nav__mobile-footer-icon">🌸</span>
               <div>
                 <p className="nav__mobile-footer-title">Halal Sisterhood</p>
-                <p className="nav__mobile-footer-text">Empowering Muslim women in health & faith.</p>
+                <p className="nav__mobile-footer-text">
+                  Empowering Muslim women in health & faith.
+                </p>
               </div>
             </div>
             <a
@@ -310,15 +331,22 @@ export default function Navigation({
 
         {/* Actions on the Right: Dark Mode & Join Now */}
         <div className="nav__actions">
+          {isHome && <HomepageSearch darkMode={darkMode} />}
           <button
             className="dark-mode-toggle"
             type="button"
             onClick={() => setDarkMode(!darkMode)}
-            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+            aria-label={
+              darkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
           >
             {darkMode ? "☀️" : "🌙"}
           </button>
-          <button className="btn btn--pill nav__join-btn" type="button" onClick={onCelebrate}>
+          <button
+            className="btn btn--pill nav__join-btn"
+            type="button"
+            onClick={onCelebrate}
+          >
             Join Now
           </button>
         </div>
