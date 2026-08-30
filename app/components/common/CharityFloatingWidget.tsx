@@ -120,7 +120,10 @@ export default function CharityFloatingWidget() {
             {/* Header */}
             <div className="charity-modal-header">
               <div className="charity-modal-badge">
-                <span>🤍</span> Sisterhood Sadaqah Jariyah <span>✨</span>
+                <span>🤍</span>
+                Sisterhood Sadaqah Jariyah
+                {/* <span className="jar"></span> */}
+                <span>✨</span>
               </div>
               <button
                 type="button"
